@@ -13,4 +13,10 @@
 //= require jquery
 //= require jquery_ujs
 //= require turbolinks
+//= require bootstrap.js
+//= require easing.js
+//= require html5shiv.js
+//= require nicescroll.js
+//= require pace.js
+//= require respond.min.js
 //= require_tree .
