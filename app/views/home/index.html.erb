@@ -1,174 +1,152 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
- 
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="description" content="">
-  <title>Cart Community</title>
-   
-  <link href="css/bootstrap.css" rel="stylesheet">
-   
-  <link href="css/main.css" rel="stylesheet">
- 
-  <!--[if lt IE 9]>
-    <script src="js/html5shiv.js"></script>
-    <script src="js/respond.min.js"></script>
-  <![endif]-->
- 
-  <link rel="shortcut icon" href="favicon.png">
-  <script src="js/pace.js"></script>
- 
-  <link href='http://fonts.googleapis.com/css?family=Open+Sans:300,600' rel='stylesheet' type='text/css'>
-</head>
 
-<body>
-  <div class="preloader"></div>
-  
-    <! -- ******************** MASTHEAD SECTION ******************** -->  
-  <main id="top" class="masthead" role="main">
-    <div class="container">
-      <div class="logo"> <a href="index.html#"><%= image_tag "logo.png" %></a>
+<link href='http://fonts.googleapis.com/css?family=Open+Sans:300,600' rel='stylesheet' type='text/css'>
+
+<div class="preloader"></div>
+
+  <! -- ******************** MASTHEAD SECTION ******************** -->  
+<main id="top" class="masthead" role="main">
+  <div class="container">
+    <div class="logo"> <a href="index.html#"><%= image_tag "logo.png" %></a>
+    </div>
+
+    <h1><strong>Revolutionalizng</strong> the way <br>
+    <strong>tasty food</strong> is delivered.</h1>
+
+    <div class="row">
+      <div class="col-md-6 col-sm-12 col-md-offset-3 subscribe">
+        <form class="form-horizontal" role="form" action="subscribe.php" id="subscribeForm" method="POST">
+          <div class="form-group">
+            <div class="col-md-7 col-sm-6 col-sm-offset-1 col-md-offset-0">
+              <input class="form-control input-lg" name="email" type="email" id="address" placeholder="Enter your email" data-validate="validate(required, email)" required="required">
+            </div>
+            <div class="col-md-5 col-sm-4">
+              <button type="submit" class="btn btn-success btn-lg">GET EARLY ACCESS</button>
+            </div>
+          </div>
+        </form>
+        <span id="result" class="alertMsg"></span> </div>
       </div>
- 
-      <h1><strong>Revolutionalizng</strong> the way <br>
-      <strong>tasty food</strong> is delivered.</h1>
- 
-      <div class="row">
-        <div class="col-md-6 col-sm-12 col-md-offset-3 subscribe">
-          <form class="form-horizontal" role="form" action="subscribe.php" id="subscribeForm" method="POST">
-            <div class="form-group">
-              <div class="col-md-7 col-sm-6 col-sm-offset-1 col-md-offset-0">
-                <input class="form-control input-lg" name="email" type="email" id="address" placeholder="Enter your email" data-validate="validate(required, email)" required="required">
-              </div>
-              <div class="col-md-5 col-sm-4">
-                <button type="submit" class="btn btn-success btn-lg">GET EARLY ACCESS</button>
-              </div>
-            </div>
-          </form>
-          <span id="result" class="alertMsg"></span> </div>
-        </div>
- 
-        <a href="index.html#explore" class="scrollto">
-        <p>SCROLL DOWN TO EXPLORE</p>
-        <p class="scrollto--arrow"><%= image_tag "scroll_down.png" %></p>
-        </a>
-    </div><! --/container -->
-  </main><! --/main -->
- 
 
-    <! -- ******************** FEATURES SECTION ******************** -->  
-  <div class="container" id="explore">
- 
-    <div class="section-title">
-      <h2>Your favorite food cart delivered to your door, by freelance drivers.</h2>
-      
-    </div>
- 
-    <div class="section-title">
-      <h2>How does it work?</h2>
-    </div>
+      <a href="index.html#explore" class="scrollto">
+      <p>SCROLL DOWN TO EXPLORE</p>
+      <p class="scrollto--arrow"><%= image_tag "scroll_down.png" %></p>
+      </a>
+  </div><! --/container -->
+</main><! --/main -->
+
+
+  <! -- ******************** FEATURES SECTION ******************** -->  
+<div class="container" id="explore">
+
+  <div class="section-title">
+    <h2>Your favorite food cart delivered to your door, by freelance drivers.</h2>
     
-    <section class="row features">
-      <div class="col-sm-6 col-md-3">
-        <div class="thumbnail"> 
-          <%= image_tag "face.png" %>
-          <div class="caption">
-            <h3>Drivers sign up</h3>
-            <p>After a quick background check, a driver is ready to start making some money.</p>
-            <p>Bike, Car, Motorcycle?  While we prefer the most environmental friendly way, all delivery methods are welcomed.</p>
-          </div>
-        </div><! --/thumbnail -->
-      </div><! --/col-sm-6-->
- 
-      <div class="col-sm-6 col-md-3">
-        <div class="thumbnail"> 
-          <%= image_tag "map.jpg" %>
-          <div class="caption">
-            <h3>Drivers Log in</h3>
-            <p>Once a driver is accepted to deliver, they can start working immediatly.
-            </p>
-            <p>This is the great part! <br>
-            Cart Community lets them work any time of they want in any area of the city they choose.
-            </p>
-            <p> After they select a delivery range, they are ready to take orders!</p>
-        
-          </div>
-        </div><! --/thumbnail -->
-      </div><! --/col-sm-6-->
- 
-      <div class="col-sm-6 col-md-3">
-        <div class="thumbnail"> 
-          <%= image_tag "map2.jpg" %>
-          <div class="caption">
-            <h3>Time to order!</h3>
-            <p>Find a food cart availible in your area, and go to the menu!.
-            <p>
-            After adding all of your items to the cart and checking out, your order has been placed.
-            </p>
-            <p>
-              A delivery driver has been assigned and you will recieve a confirmation email within 10 minutes.
-            </p>
-          </div>
-        </div><! --/thumbnail -->
-      </div><! --/col-sm-6-->
- 
-      <div class="col-sm-6 col-md-3">
-        <div class="thumbnail"> 
-          <%= image_tag "food2.jpg" %>
-          <div class="caption">
-            <h3>Time to eat!</h3>
-            <p>After your prompt delivery of fresh food, make sure you tip your driver!</p>
-          </div>
-        </div><! --/thumbnail -->
-      </div><! --/col-sm-6-->
-    </section><! --/section -->
- 
+  </div>
 
-      <! -- ******************** More Information SECTION ******************** -->   
-    <div class="highlight testimonials">
-      <div class="container">
-        <div class="section-title">
-          <h2>More Information</h2>
-          <h4>Are you a driver/customer/food-cart wanting more information? </h4>
-        </div>
-        <center>
-          <div class="row">
-        <div class="col-md-6 col-sm-12 col-md-offset-3 subscribe">
-          <form class="form-horizontal" role="form" action="subscribe.php" id="subscribeForm" method="POST">
-            <div class="form-group">
-              <div class="col-md-7 col-sm-6 col-sm-offset-1 col-md-offset-0">
-                <input class="form-control input-lg" name="email" type="email" id="address" placeholder="Enter your email" data-validate="validate(required, email)" required="required">
-              </div>
-              <div class="col-md-5 col-sm-4">
-                <button type="submit" class="btn btn-success btn-lg">GET EARLY ACCESS</button>
-              </div>
-            </div>
-          </form>
-          <span id="result" class="alertMsg"></span> </div>
-        </div>
-        </center>
- 
-      </div><! --/container -->
-    </div><! --/highlight Testimonials -->
- 
-
+  <div class="section-title">
+    <h2>How does it work?</h2>
+  </div>
   
- 
+  <section class="row features">
+    <div class="col-sm-6 col-md-3">
+      <div class="thumbnail"> 
+        <%= image_tag "face.png" %>
+        <div class="caption">
+          <h3>Drivers sign up</h3>
+          <p>After a quick background check, a driver is ready to start making some money.</p>
+          <p>Bike, Car, Motorcycle?  While we prefer the most environmental friendly way, all delivery methods are welcomed.</p>
+        </div>
+      </div><! --/thumbnail -->
+    </div><! --/col-sm-6-->
 
-     
+    <div class="col-sm-6 col-md-3">
+      <div class="thumbnail"> 
+        <%= image_tag "map.jpg" %>
+        <div class="caption">
+          <h3>Drivers Log in</h3>
+          <p>Once a driver is accepted to deliver, they can start working immediatly.
+          </p>
+          <p>This is the great part! <br>
+          Cart Community lets them work any time of they want in any area of the city they choose.
+          </p>
+          <p> After they select a delivery range, they are ready to take orders!</p>
+      
+        </div>
+      </div><! --/thumbnail -->
+    </div><! --/col-sm-6-->
+
+    <div class="col-sm-6 col-md-3">
+      <div class="thumbnail"> 
+        <%= image_tag "map2.jpg" %>
+        <div class="caption">
+          <h3>Time to order!</h3>
+          <p>Find a food cart availible in your area, and go to the menu!.
+          <p>
+          After adding all of your items to the cart and checking out, your order has been placed.
+          </p>
+          <p>
+            A delivery driver has been assigned and you will recieve a confirmation email within 10 minutes.
+          </p>
+        </div>
+      </div><! --/thumbnail -->
+    </div><! --/col-sm-6-->
+
+    <div class="col-sm-6 col-md-3">
+      <div class="thumbnail"> 
+        <%= image_tag "food2.jpg" %>
+        <div class="caption">
+          <h3>Time to eat!</h3>
+          <p>After your prompt delivery of fresh food, make sure you tip your driver!</p>
+        </div>
+      </div><! --/thumbnail -->
+    </div><! --/col-sm-6-->
+  </section><! --/section -->
+
+
+    <! -- ******************** More Information SECTION ******************** -->   
+  <div class="highlight testimonials">
+    <div class="container">
+      <div class="section-title">
+        <h2>More Information</h2>
+        <h4>Are you a driver/customer/food-cart wanting more information? </h4>
+      </div>
+      <center>
+        <div class="row">
+      <div class="col-md-6 col-sm-12 col-md-offset-3 subscribe">
+        <form class="form-horizontal" role="form" action="subscribe.php" id="subscribeForm" method="POST">
+          <div class="form-group">
+            <div class="col-md-7 col-sm-6 col-sm-offset-1 col-md-offset-0">
+              <input class="form-control input-lg" name="email" type="email" id="address" placeholder="Enter your email" data-validate="validate(required, email)" required="required">
+            </div>
+            <div class="col-md-5 col-sm-4">
+              <button type="submit" class="btn btn-success btn-lg">GET EARLY ACCESS</button>
+            </div>
+          </div>
+        </form>
+        <span id="result" class="alertMsg"></span> </div>
+      </div>
+      </center>
+
+    </div><! --/container -->
+  </div><! --/highlight Testimonials -->
+
+
+
+
+
    
  
-    <div class="container">
-      <section class="row breath">
-        <div class="col-md-12 footerlinks">
-          <p>&copy; 2014 BlackTie.co. All Rights Reserved</p>
-        </div>
-      </section><! --/section -->
-    </div><! --/container -->
- 
- 
- 
+
+  <div class="container">
+    <section class="row breath">
+      <div class="col-md-12 footerlinks">
+        <p>&copy; 2014 Cart Community. All Rights Reserved</p>
+      </div>
+    </section><! --/section -->
+  </div><! --/container -->
+
+
+
  
 <script src="js/jquery.js"></script>
 <script src="js/bootstrap.js"></script>
@@ -192,5 +170,4 @@
 
 </script>
  
-</body>
-</html>
+
