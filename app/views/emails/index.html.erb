@@ -9,14 +9,14 @@
     <div class="logo"> <a href="index.html#"><%= image_tag "logo.png" %></a>
     </div>
 
-    <h1><strong>Revolutionalizng</strong> the way <br>
+    <h1><strong>Revolutionalizing</strong> the way <br>
     <strong>tasty food</strong> is delivered.</h1>
 
     <div class="row">
       <div class="col-md-6 col-sm-12 col-md-offset-3 subscribe">
           <div class="form-group">
-            
-              <%= render "signup_form" %>
+            <%= render "signup_form", id: "new_link", remote: true %>
+             
             
           </div>
         </form>
@@ -46,7 +46,8 @@
   <section class="row features">
     <div class="col-sm-6 col-md-3">
       <div class="thumbnail"> 
-        <%= image_tag "face.png" %>
+          <%= image_tag "rsz_2face.png" %>
+
         <div class="caption">
           <h3>Drivers sign up</h3>
           <p>After a quick background check, a driver is ready to start making some money.</p>
@@ -63,7 +64,7 @@
           <p>Once a driver is accepted to deliver, they can start working immediatly.
           </p>
           <p>This is the great part! <br>
-          Cart Community lets them work any time of they want in any area of the city they choose.
+          Cart Community lets them work any time they want in any area of the city they choose.
           </p>
           <p> After they select a delivery range, they are ready to take orders!</p>
       

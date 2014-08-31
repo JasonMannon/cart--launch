@@ -9,7 +9,7 @@
 
 <%= form_for @email do |f| %>
   <div class="col-md-7 col-sm-6 col-sm-offset-1 col-md-offset-0">
-    <%= f.text_field :email, :class => "form-control input-lg",  placeholder: "Enter your email" %>
+    <%= f.text_field :email, :class => "form-control input-lg",  placeholder: "Enter your email", type: "email" %>
   </div>
   <div class="col-md-5 col-sm-4">
     <%= f.submit "Submit Listing", :class => "btn btn-success btn-lg" %><br />

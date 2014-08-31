@@ -6,11 +6,16 @@ class EmailsController < ApplicationController
 
 
   def create
-    @email = Email.new(email_params)
-    if @email.save
-      redirect_to root_url, notice: "Your item has been added"
+    @email = Email.find_by_email(params[:email][:email]);
+    if @email.nil?
+      @email = Email.new(email_params)
+      if @email.save
+        redirect_to root_url
+      else
+        redirect_to root_url, notice: "There was an error, please try again!"
+      end
     else
-      redirect_to root_url
+      redirect_to root_url, notice: "You have already signed up, Thanks!"
     end
   end
 
