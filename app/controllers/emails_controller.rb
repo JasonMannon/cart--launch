@@ -12,10 +12,12 @@ class EmailsController < ApplicationController
       if @email.save
         redirect_to root_url
       else
-        redirect_to root_url, notice: "There was an error, please try again!"
+        flash[:notice] = "There was an error, please try again."
+        redirect_to root_url
       end
     else
-      redirect_to root_url, notice: "You have already signed up, Thanks!"
+      flash[:notice] = "You have already signed up, thanks for your interest!"
+      redirect_to root_url
     end
   end
 
