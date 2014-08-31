@@ -10,6 +10,7 @@ class EmailsController < ApplicationController
     if @email.nil?
       @email = Email.new(email_params)
       if @email.save
+        flash[:notice] = "Thanks for signing up!"
         redirect_to root_url
       else
         flash[:notice] = "There was an error, please try again."
