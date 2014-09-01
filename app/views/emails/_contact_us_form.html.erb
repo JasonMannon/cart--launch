@@ -7,12 +7,15 @@
   </ul>
 <% end %>
 
-<%= form_tag do |f| %>
-  <div class="col-md-7 col-sm-6 col-sm-offset-1 col-md-offset-0">
-    <%= f.text_field :class => "form-control input-lg",  placeholder: "Enter your email", type: "email" %><br>
-    <%= f.text_area :class => "form-control input-lg", "", placeholder: "Description" %>
+<%= form_for @contact do |f| %>
+  <div class="form-conrtrol input-lg">
+  <%= f.select :category,  options_for_select([["Customer", "customer"], ["Food Cart", "foodcart"], ["Driver", "driver"], ["Undecided", "undecided"]]), :class => 'form-control input-lg' %>
   </div>
-  <div class="col-md-5 col-sm-4">
-    <%= f.submit "Submit Listing", :class => "btn btn-success btn-lg" %><br />
-  </div>
+  <%= f.text_field :email, :class => "form-control input-lg",  placeholder: "Email", type: "email" %><br>
+  <%= f.text_field :name, :class => "form-control input-lg",  placeholder: "Name", type: "name" %><br>
+  <%= f.text_area :description, :class => "form-control input-lg",  placeholder: "Description", type: "description", :size => "10x5"  %><br>
+
+
+  <%= f.submit "Submit", :class => "btn btn-success btn-lg" %><br />
+
 <% end %>

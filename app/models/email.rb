@@ -5,7 +5,7 @@ class Email < ActiveRecord::Base
 
 
   private
-  def send_confirmation_email2
+  def send_confirmation_email
     RestClient.post Rails.application.secrets.API_URL+"/messages",
       :from => "ev@example.com",
       :to => self.email,

@@ -2,6 +2,7 @@ class EmailsController < ApplicationController
   def index
     @email = Email.new 
     @emails = Email.all
+    @contact = Contact.new
   end
 
 
