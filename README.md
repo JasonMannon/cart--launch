@@ -1,5 +1,4 @@
-#### Cart Community Landing page
+#### CartWheels Landing page
 
-  * Need to complete transition into rails app
+  * Need to create html mail templates
 
-  * Need to create mailers
