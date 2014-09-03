@@ -6,7 +6,7 @@ class Email < ActiveRecord::Base
 
   private
   def send_confirmation_email
-    RestClient.post Rails.application.secrets.API_URL+"/messages",
+    RestClient.post ENV["MAILGUN_API_KEY"]+"/messages",
       :from => "ev@example.com",
       :to => self.email,
       :subject => "This is subject",
